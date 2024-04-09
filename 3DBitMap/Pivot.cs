@@ -47,7 +47,7 @@ namespace _3DObjects
 
         public void Move(Vector3 v)
         {
-            Center += v;
+            Center += Vector3.Transform(v, GlobalCoordsMatrix);
         }
 
         public void Rotate(float angle, string axis)
